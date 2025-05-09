@@ -6,6 +6,31 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <form method="get" action="" enctype="multipart/form-data">
+        <input type="hidden" name="no" value="1">
+        아이디 : <input type="text" name="id" value="test" autofocus autocomplete="off" maxlength="10" required><br>
+        비밀번호 : <input type="password" name="pw" placeholder="비밀번호를 입력하세요"><br>
+        성별 : 
+            <input type="radio" name="gender" value="1" checked>남
+            <input type="radio" name="gender" value="2">여 <br>
+        취미 :
+            <input type="checkbox" name="hobby" value="1">게임
+            <input type="checkbox" name="hobby" value="2">독서
+            <input type="checkbox" name="hobby" value="3" checked>영화
+            <input type="checkbox" name="hobby" value="4">낚시
+            <input type="checkbox" name="hobby" value="5">운동 <br>
+        첨부파일 : <input type="file" name="profile"><br>
+        최종학력 : 
+            <select name="school"> <!--multiple : 중복선택 할 수 있는 기능-->
+                <option value="3">대학원</option>
+                <option value="2" selected>대학교</option>
+                <option value="1">고등학교</option>
+            </select><br>
+        <textarea name="introduce" cols="40" rows="5">안녕하세요</textarea> <br>
+        <input type="image" src="img/google.png"><br>
+        <input type="button" value="버튼">
+        <input type="reset" value="초기화">
+        <input type="submit">
+    </form>
 </body>
 </html>
