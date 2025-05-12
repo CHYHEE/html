@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            padding: 10px 15px 20px 25px;   /* top right bottom left / 2개 : 위아래, 양옆*/
+            border: 1px solid black;
+            margin: 5px;
+
+            text-align: center;
+            line-height: 100px;
+        }
+        #box1 {
+            box-sizing: content-box;    /* content만 (기본값) */
+        }
+        #box2 {
+            box-sizing: border-box;   /* border까지(content+padding+border) */
+            box-shadow: 2px 2px 2px black;
+        }
+        img {
+            border-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1">박스</div>
+    <div id="box2">박스</div>
+    <img src="/img/google.png">
+</body>
+</html>
