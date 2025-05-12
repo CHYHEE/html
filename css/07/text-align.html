@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Single+Day&display=swap" rel="stylesheet">
+    <style>
+        div {
+            width: 500px;
+            text-align: center;
+            height: 50px;
+            line-height: 50px;
+        }
+        a {
+            text-decoration: none;
+        }
+        .shadow1 {
+            color: red;
+            text-shadow: 1px 1px black;
+        }
+        .shadow2 {
+            text-shadow: 5px 5px 3px orange;
+        }
+        .shadow3 {
+            color : #fff;
+            text-shadow: 7px -7px 20px #000;
+        }
+        /* font 속성 font-style, font-variant, font-weight, font-size, font-family */
+        #font {
+            font:normal normal bold 24px 'Single Day';
+        }
+        #box {
+            width: 200px;
+            /* white-space: nowrap; */
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        ol {
+            list-style-type: none;
+        }
+    </style>
+</head>
+<body>
+    <ol>
+        <li>월요일</li>
+        <li>화요일</li>
+        <li>수요일</li>
+    </ol>
+    <div id="box">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium repudiandae repellendus eveniet delectus, fugit sequi accusamus quae saepe neque? Voluptates ex ipsum magni repellendus natus modi, voluptatibus quibusdam eius tempora!</div>
+    <h1 class="shadow1">HTML</h1>
+    <h1 class="shadow2">CSS</h1>
+    <h1 class="shadow3">JavaScript</h1>
+    <div><a href="">홍길동</a></div>
+    <div>홍길동</div>
+    <div id="font">홍길동</div>
+</body>
+</html>
