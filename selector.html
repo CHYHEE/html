@@ -46,9 +46,34 @@
         a:hover {
             color:red;
         }
+        input[type='text']:focus {
+            background-color: azure;
+        }
+        #family > li:first-child {
+            color:yellow;
+        }
+        #family > li:last-child {
+            color:orange;
+        }
+        #family > li:nth-child(2) {
+            color:green;
+        }
+        #family > li:nth-child(2n+1) {
+            background-color: gray;
+        }
+        #family > li:nth-child(2n) {
+            background-color: powderblue;
+        }
     </style>
 </head>
 <body>
+    <ul id="family">
+        <li>첫째</li>
+        <li>둘째</li>
+        <li>셋째</li>
+        <li>넷째</li>
+        <li>다섯째</li>
+    </ul>
     <a href="http://www.naver.com">네이버</a>
     <h1>제목1</h1>
     <h2>제목2</h2>
