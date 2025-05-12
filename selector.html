@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* * {
+            color:blue;
+        } */
+        #greet {
+            color: red;
+        }
+        #name {
+            color: aqua;
+        }
+        .name {
+            color: green;
+        }
+        input[type='text'] {
+            background-color: gray;
+        }
+        h1 {
+            color: blue;
+        }
+        /* 자식 */
+        #parent, #greet, #name {
+            background-color: gold;
+        }
+        /* div면서 클래스가 name인 것 */
+        div.name {
+            color: red;
+        }
+        h1 + h2 {
+            color: red;
+        }
+        h1 ~ h2 {
+            background-color: yellow;
+        }
+        a:link {
+            color:black;
+        }
+        a:visited {
+            color:black;
+        }
+        a:hover {
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <a href="http://www.naver.com">네이버</a>
+    <h1>제목1</h1>
+    <h2>제목2</h2>
+    <h2>제목2</h2>
+    <h2>제목2</h2>
+    <div id="parent">
+        <div>첫째</div>
+        <div>둘째
+            <a>둘째-첫째</a>
+            <a>둘째-둘째</a>
+        </div>
+        <span>셋째
+            <div>셋째-첫째</div>
+            <div>셋째-둘째</div>
+        </span>
+    </div>
+    <h1 id="greet">안녕하세요</h1>
+    <h1>안녕하세요</h1>
+    <p id="name">저는 홍길동입니다.</p>
+    <p class="name">저는 홍길동입니다.</p>
+    <p class="name">저는 홍길동입니다.</p>
+    <p class="name">저는 홍길동입니다.</p>
+    <p class="name">저는 홍길동입니다.</p>
+    <p class="name">저는 홍길동입니다.</p>
+    <input type="text" >
+    <input type="password" >
+</body>
+</html>
