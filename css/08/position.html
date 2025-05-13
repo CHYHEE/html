@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+        }
+
+        #box1 {
+            /* position: static;   static: 기본값, 위치를 지정하지 않음 */
+            /* position: relative; relative: 앞 태그 위치를 기준으로 */
+            /* position: absolute; absolute: 앞 태그(부모?) 기준으로 절대좌표 */
+            position: fixed;    /* fixed: 화면 기준으로 절대좌표 */
+            background-color: red;
+        }
+
+        #box2 {
+            position: absolute;
+            background-color: blue;
+            left: 10px;
+            top: -10px;
+        }
+
+        #box3 {
+            position: absolute;
+            background-color: orange;
+            left: 20px;
+            top: -20px;
+        }
+
+        #container {
+            width: 1000px;
+            height: 1000px;
+            position: relative;
+            left: 100px;
+            top: 100px;
+            border: 1px solid black;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="box1"></div>
+        <div id="box2"></div>
+        <div id="box3"></div>
+    </div>
+</body>
+
+</html>
