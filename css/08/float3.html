@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            margin: 0 10px;
+        }
+        #box1 {
+            background-color: #ffd800;
+            float: left;
+        }
+        #box2 {
+            background-color: #0094ff;
+            float: right;
+        }
+        .clear {
+            clear: both; /* float 속성 해제 */
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box" id="box1">박스1</div>
+        <div class="box" id="box2">박스2</div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste vitae labore commodi odit animi voluptatem veritatis laboriosam exercitationem qui atque blanditiis officia quod beatae, dignissimos sint iure consequuntur quos in.</p>
+        <p class="clear">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste vitae labore commodi odit animi voluptatem veritatis laboriosam exercitationem qui atque blanditiis officia quod beatae, dignissimos sint iure consequuntur quos in.</p>
+    </div>
+</body>
+</html>
