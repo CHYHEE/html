@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .wrap {
+            width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .header {
+            padding: 40px 0;
+            border: 1px solid black;
+        }
+        .menu {
+            
+        }
+        .menu > ul {
+            margin: 0;
+            padding: 0;
+        }
+        .menu > ul > li {
+            width: 25%;
+            height: 40px;
+            list-style: none;
+            line-height: 40px;
+            border: 1px solid black;
+            float: left;
+            box-sizing: border-box;
+        }
+        .submenu {
+            padding: 100px 0;
+            float: left;
+            width: 30%;
+            border: 1px solid black;
+        }
+        .content {
+            padding: 100px 0;
+            border: 1px solid black;
+            float: right;
+            width: 70%;
+        }
+        .footer {
+            border: 1px solid black;
+            padding: 30px 0;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="header">
+            HEADER
+        </div>
+        <div class="menu">
+            <ul>
+                <li>MENU1</li>
+                <li>MENU2</li>
+                <li>MENU3</li>
+                <li>MENU4</li>
+            </ul>
+        </div>
+        <div class="submenu">
+            SUBMENU
+        </div>
+        <div class="content">
+            CONTENT
+        </div>
+        <div class="footer">
+            FOOTER
+        </div>
+    </div>
+</body>
+</html>
