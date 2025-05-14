@@ -6,16 +6,16 @@
     <title>Document</title>
     <style>
         .container {
-            width: 700px;
+            width: 400px;
             display: flex;
             background-color: #eee;
             border: 1px solid black;
             margin-bottom: 30px;
         }
-        #opt1 { flex-direction: row;}
-        #opt2 { flex-direction: row-reverse;}
-        #opt3 { flex-direction: column-reverse;}
-        #opt4 { flex-direction: column;}
+        #opt1 { flex-flow: row wrap;}
+        #opt2 { flex-flow: row nowrap;}
+        #opt3 { flex-flow: wrap-reverse;}
+        #opt4 { flex-flow: wrap;}
 
         .box {
             width: 100px;
@@ -40,21 +40,33 @@
         <div class="box">1</div>
         <div class="box">2</div>
         <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
     </div>
     <div class="container" id="opt2">
         <div class="box">1</div>
         <div class="box">2</div>
         <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
     </div>
     <div class="container" id="opt3">
         <div class="box">1</div>
         <div class="box">2</div>
         <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
     </div>
     <div class="container" id="opt4">
         <div class="box">1</div>
         <div class="box">2</div>
         <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
     </div>
 </body>
 </html>
