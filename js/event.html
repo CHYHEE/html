@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+            let btn2 = document.querySelector("#btn2");
+            console.log(btn2);
+            //속성연결방식
+            btn2.onclick = function () {
+                alert('안녕2');
+            };
+            btn2.onclick = function () {
+                alert('안녕2');
+            };
+            let btn3 = document.querySelector("#btn3");
+            //리스너 연결방식
+            btn3.addEventListener('click', function() {
+                alert('안녕3');
+            });
+        };
+
+    </script>
+</head>
+
+<body>
+    <input type="button" onclick="alert('안녕'); console.log('안녕');" value="버튼">
+    <input type="button" id="btn2" value="버튼2">
+    <input type="button" id="btn3" value="버튼3">
+</body>
+
+</html>
