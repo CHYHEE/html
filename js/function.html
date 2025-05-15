@@ -20,16 +20,17 @@
 
     //bbb(); -> 에러: 변수가 담긴 함수는 반드시 밑에 호출
 
-    // 익명함수
+    // 익명함수(이름이 없는 함수)
     let bbb = function () {
         console.log('bbb');
-    }
+    };
     bbb();
 
     // 화살표 함수
     let ccc = () => {
         console.log('ccc');
     }
+    
     ccc();
 
     // 즉시 실행 함수
@@ -46,4 +47,51 @@
     var result = add();
     console.log(result);
     //console.log(r); //에러: r은 지역변수
+
+    function test(n) {
+        if(n%2==0) {
+            console.log("짝수");
+            return;
+        }
+        return 0;
+    }
+
+    //callback
+    function calculator(func, x, y) {
+        var r = func(x, y);
+        return r;
+    }
+
+    var result = calculator(function(a,b) {
+        return a+b;
+    }, 10, 20);
+    console.log(result);
+
+    setTimeout(function() {
+        console.log('callback!!!');
+    }, 1000);
+
+    //setTimeout(bbb(), 1000);
+    console.log('밖에서 출력');
+
+    function test() {
+        var text = "안녕";  // 지역변수
+        return function() {     //내부함수, 리턴값, 값이 함수
+            return text;
+        }
+    }
+    var t = test();
+    console.log(t());
+
+    function test2(name) {
+        var text = "안녕" + name;
+        return function() {
+            return text;
+        }
+    }
+    var t1 = test2('홍길동');
+    var t2 = test2('김길동');
+    console.log(t1());
+    console.log(t2());
+    
 </script>
