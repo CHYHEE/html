@@ -1,0 +1,50 @@
+<script>
+    // 객체 선언 방법
+    let car = {
+        model : '아반떼',
+        color : '흰색',
+        price : 2000,
+        run : function() {
+            console.log('차가 달린다');
+        }
+    };
+    console.log(typeof car);
+    console.log(car);
+    console.log(car.price);
+    //객체에 속성을 추가
+    car.company = '현대';
+    console.log(car);
+    car.back = function() {
+        console.log('차가 후진합니다.');
+    };
+    car.back();
+    let name = 'model';
+    console.log(car[name]);     // 속성명을 변수로 처리 가능
+    console.log(car.name);
+
+    // 생성자 함수
+    function Member() {
+        this.login =function() {
+            console.log('로그인');
+        };
+    }
+    let m = new Member();
+    console.log(typeof m);
+    m.login();
+
+    //ES6 class
+    class Member2 {
+        //생성자
+        constructor(name) {
+            this.name = name;
+        }
+
+        //메소드
+        login() {
+            console.log(this.name + '으로 로그인');
+        }
+    }
+    let m2 = new Member2('홍길동');
+    m2.login();
+
+</script>
