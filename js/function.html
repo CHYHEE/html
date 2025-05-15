@@ -1,0 +1,49 @@
+<script>
+    var a = 1;  //전역변수(전체영역)
+    /*
+    함수의 구조
+    function 함수이름([매개변수 명, ...]) {
+        실행문...
+        [return 값;]
+    }
+    */
+
+    // 함수 실행
+    // 함수명();
+    aaa();
+
+    // 함수 선언방법
+    // 일반적
+    function aaa() {
+        console.log('aaa');
+    }
+
+    //bbb(); -> 에러: 변수가 담긴 함수는 반드시 밑에 호출
+
+    // 익명함수
+    let bbb = function () {
+        console.log('bbb');
+    }
+    bbb();
+
+    // 화살표 함수
+    let ccc = () => {
+        console.log('ccc');
+    }
+    ccc();
+
+    // 즉시 실행 함수
+    (function ddd() {
+        console.log('ddd');
+    })();
+
+    //var result;
+    //함수에서 전역변수 사용x
+    function add() {
+        var r = 10+20;  //지역(local)변수 / var를 안 쓰면 전역변수로 바뀜
+        return r;
+    }
+    var result = add();
+    console.log(result);
+    //console.log(r); //에러: r은 지역변수
+</script>
