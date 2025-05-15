@@ -1,0 +1,91 @@
+<script>
+    var age = 40;
+    var age = 30;
+
+    let aaa="홍길동";
+
+    // let aaa = "김길동";
+    console.log(aaa);
+    // let aaa = "홍길동";
+    
+    // const bbb = 100;
+    // bbb = 200;
+    
+    //숫자형
+    let num = 1.5;
+    console.log(typeof num);
+
+    //문자형
+    let n = "홍길동";
+    console.log(typeof(n));
+
+    //논리형
+    let b = true;
+    console.log(typeof b);
+
+    //미정의된 값
+    let u;
+    console.log(typeof u);
+
+    //null형
+    let nu = null;
+    console.log(typeof nu);
+
+    //배열
+    let arr = [1, 2, 3];
+    console.log(typeof arr);
+
+    let arr2 = arr; //주소값
+    arr2[0] = 4;
+    console.log(arr);
+
+    //객체
+    let obj = {name: "홍길동", age: 30};
+    console.log(typeof obj);
+
+    //함수
+    let f = function() {
+        console.log("hello");
+    };
+    console.log(typeof f);
+
+    arr = [1, 3.14, obj, '홍길동'];
+
+    let bbb = '홍길동';
+    bbb = 10;
+
+    let name = 'Kim';
+    let classRoom = 204;
+    let text = name+"님, "+classRoom+"호 강의실로 입장하세요";
+    text = `${name}님, ${classRoom}호 강의실로 입장하세요`;
+
+    let r = parseInt('10') - 1;
+    console.log(r);
+
+    //문자 -> 숫자
+    //Number, parseInt 차이
+    console.log(parseInt('')); //NaN : Not a Number
+
+    //숫자 -> 문자
+    let age = 10;
+    let msg = String(age);
+    console.log(typeof msg);
+    console.log(age.toString(16));
+
+    add(bbb, name);
+
+    function add(a, b) {
+        return a - b;
+    }
+
+    class ClassName  {
+
+    } 
+    let c = new ClassName();
+
+</script>
+<input type="text" id="number" value="10">
+<script>
+    let val = document.getElementById("number").value;
+    console.log(typeof val);
+</script>
