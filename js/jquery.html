@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        .redText {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <img id="img" src="/img/google.png">
+    <h1>안녕하세요1</h1>
+    <h1>안녕하세요2</h1>
+    <h1>안녕하세요3</h1>
+    <h1>안녕하세요4</h1>
+    <h1>안녕하세요5</h1>
+    <h2 style="color: blue;">안녕</h2>
+    <div id="target">
+        <b>홍길동</b>
+    </div>
+    <script>
+        // $("h1").css('color', 'red');
+        let arr = [1, 2, 3, 4, 5];
+        $.each(arr, function(i,e) {
+            console.log(i, e);
+        });
+        $("h1").each((i,e)=> {
+            //console.log(i, e);
+            console.log(e.innerText);
+        });
+        // 문서(DOM) 조작
+        // 클래스 추가
+        $("h1").addClass("redText");
+        $("h1").eq(1).removeClass("redText");
+
+        // 속성
+        console.log($("#img").attr("src"));
+        // $("#img").attr("src", "/lightbox/images/tree-1-thumb.jpg");
+        // $("#img").attr("alt", "나무이미지");
+        $("#img").attr({
+            src:"/lightbox/images/tree-1-thumb.jpg",
+            alt:"나무이미지"
+        });
+        // alt 속성 제거
+        $("#img").removeAttr("alt");
+
+        // 스타일 속성
+        // .css()
+        // 스타일 제거
+        $("h2").css("color", "");
+
+        // 객체 내부
+        console.log($("#target").text());
+        console.log($("#target").html());
+        $("#target").html("<h1>김길동</h1>");
+
+        // 객체 제거
+        //$("#target").remove();      // 해당 선택자의 객체자체(포함해서 자손)가 제거
+        $("target").empty();      // 비우기
+    </script>
+</body>
+</html>
