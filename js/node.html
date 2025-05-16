@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            // li 객체 생성
+            let newItem = document.createElement("li");
+            // li 객체 안에 들어갈 텍스트 노드 생성
+            let textNode = document.createTextNode('TypeScript');
+            // 텍스트 노드를 li에 붙이기
+            newItem.appendChild(textNode);
+            // li를 ul의 자식으로 붙이기
+            document.querySelector("#itemList").appendChild(newItem);
+
+            let newImg = document.createElement("img");
+            newImg.src = "/img/google.png";
+            document.body.appendChild(newImg);
+
+            // 노드 삭제
+            document.querySelector('h1').remove();
+        }
+    </script>
+</head>
+<body>
+    <h1>Web Programming</h1>
+    <ul id="itemList">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+
+    </ul>
+</body>
+</html>
