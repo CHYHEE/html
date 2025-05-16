@@ -1,0 +1,14 @@
+<input type="button" value="버튼1">
+<input type="button" value="버튼2">
+<input type="button" value="버튼3">
+
+<script>
+    let buttons = document.querySelectorAll("input[type='button']");
+    console.log(buttons);
+    buttons.forEach((e, i) => {
+        e.onclick = function(e) {
+            //this : 이벤트가 발생한 객체
+            console.log(this.value);
+        };
+    });
+</script>
