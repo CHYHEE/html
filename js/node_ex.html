@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .drawBorder {
+            border:1px solid black;
+        }
+        .blueText {
+            color:blue;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            // 내 코드
+            // document.querySelector("#html").onclick = function(e) {
+            //     alert('삭제하시겠습니까?');
+            //     e.preventDefault();
+            //     document.querySelector('#html').remove();
+            // }
+            // document.querySelector("#css").onclick = function(e) {
+            //     alert('삭제하시겠습니까?');
+            //     e.preventDefault();
+            //     document.querySelector('#css').remove();
+            // }
+            // document.querySelector("#js").onclick = function(e) {
+            //     alert('삭제하시겠습니까?');
+            //     e.preventDefault();
+            //     document.querySelector('#js').remove();
+            // }
+
+
+            // 강사님 코드
+            console.log('window.onload');
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+            console.log('DOMContentLoaded');
+            document.querySelector("button").onclick = function(e) {
+                e.preventDefault();
+                newRegister();
+                this.classList.toggle("blueText");
+            }
+            // input에서 엔터치면 추가
+            document.querySelector("#inputText").addEventListener("keypress", (e) => {
+                if (e.keyCode === 13) {
+                    newRegister();
+                }
+            });
+
+            const itemList = document.querySelector("#itemList");
+            itemList.addEventListener("click", (e) => {
+                if (e.target.tagName === "LI") {
+                    if (confirm("삭제하시겠습니까?")) {
+                        e.target.remove();
+                    }
+                }
+            });
+        });
+        function newRegister() {
+            let subject = document.querySelector("#inputText").value;
+            if (subject === "") {
+                alert("주제를 입력하세요");
+                return;
+            } else {
+                // li 객체 생성
+                let newItem = document.createElement("li");
+                // li 객체 안에 들어갈 텍스트 노드 생성
+                let textNode = document.createTextNode(subject);
+                // 텍스트 노드를 li에 붙이기
+                newItem.appendChild(textNode);
+                // li를 ul의 자식으로 붙이기
+                document.querySelector("#itemList").appendChild(newItem);
+                newItem.classList.add("drawBorder");    //클래스 추가
+                newItem.classList.add("blueText");
+                document.querySelector("#inputText").value = "";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Web Programming</h1>
+    <p>공부할 주제를 기록해 보세요</p>
+    <p>
+        <input type="text" id="inputText"><button>추가</button>
+    </p>
+    <ul id="itemList">
+        <li id="html">HTML</li>
+        <li id="css">CSS</li>
+        <li id="js">JavaScript</li>
+
+    </ul>
+</body>
+</html>
