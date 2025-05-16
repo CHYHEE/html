@@ -5,16 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        window.onload = function() {
-            document.querySelector("#btn").onclick = function() {
-                let kor = Number(document.querySelector("#kor").value);
-                let eng = Number(document.querySelector("#eng").value);
-                let math = Number(document.querySelector("#math").value);
-                let sum = kor + eng + math;
-                document.querySelector("#sum").value = sum;
-                document.querySelector("#avg").value = sum/3;
-            }
-        }
+        // window.onload = function() {
+        //     document.querySelector("#btn").onclick = function() {
+        //         let kor = Number(document.querySelector("#kor").value);
+        //         let eng = Number(document.querySelector("#eng").value);
+        //         let math = Number(document.querySelector("#math").value);
+        //         let sum = kor + eng + math;
+        //         document.querySelector("#sum").value = sum;
+        //         document.querySelector("#avg").value = sum/3;
+        //     }
+        // }
+
+        document.querySelector("#btn").onclick = function() {
+            console.log(document.querySelectorAll("input[type='input']"));
+            document.querySelectorAll("input[type='input']").forEach((e,i) => {
+                console.log(e,i);
+            });
+        };
     </script>
 </head>
 <body>
