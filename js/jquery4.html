@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(function() {
+            $("#btn").click(function() {
+                $.ajax({
+                    url: 'https://jsonplaceholder.typicode.com/posts',    // http://127.0.0.1:5500/js/node_ex.html
+                    data : {
+                        page:2
+                    },
+                    method : 'GET',
+                    cache : false,      // 기본값 true
+                    async : true,      // 비동기 여부, 기본값 true
+                    dataType : 'JSON', // 문서타입
+                    success : function(res) {
+                        let html = "";
+                        html += "<table border='1'>";
+                        html += "<tr><th>번호</th><th>제목</th></tr>"
+                        $.each(res, (i, e) => {
+                            html += "<tr><td>"+e.id+"</td><td>"+e.title+"</td></tr>";
+                        });
+                        html += "</table>";
+                        $("#div1").html(html);
+                    },
+                    error : function(e) {
+                        console.log(e);
+                    }
+                });
+            })
+        })
+    </script>
+</head>
+<body>
+    <input type="button" value="AJAX" id="btn">
+    <div id="div1"></div>
+</body>
+</html>
