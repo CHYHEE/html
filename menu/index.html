@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes"> 
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<meta name="keywords" content="">
+<meta name="description" content="">
+
+<title>메뉴 샘플</title>
+<head>
+<!-- Styles -->  
+<link rel="stylesheet" href="css/reset.css"/>
+<link rel="stylesheet" href="css/common.css"/>
+
+<link href="https://fonts.googleapis.com/css?family=Sintony:400,700" rel="stylesheet">  
+<!-- scripts -->         
+<script src="js/jquery-1.12.0.min.js" type="text/javascript"></script>
+
+<script>
+    $(function() {
+        $(".depth1 > li").mouseover(function() {
+            // let idx = $(".depth1 > li").index(this);
+            // $(".depth2").eq(idx).slideDown();
+            $(this).find(".depth2").stop().slideDown(300);
+        }).mouseleave(function() {
+            $(this).find(".depth2").stop().slideUp(300);
+        })
+    })
+</script>
+<style>
+    .depth2 {
+        display: none;
+    }
+</style>
+
+</head>
+
+<body>
+    <div id="header">
+        <div class="head_top">
+            <div class="size">
+                <div class="header_call">
+                    <div class="txt">
+                        <a href="">02-1234-5678</a>
+                        <a href="">test@test.com</a>
+                    </div>
+                </div>
+                <h1 class="logo"><a href="/"><img src="img/logo.png"/></a></h1>
+                <div class="util clear">
+                    <a href="">로그인</a>
+                    <a href="">회원가입</a>
+                    <a href="">주문내역</a>
+                    <a href="" class="last">1:1문의</a>
+                </div>
+            </div>
+        </div>
+        <div class="head_bot">
+            <div class="size">
+                <div class="gnb">
+                    <ul class="depth1 clear">
+                        <li>
+                            <a href="">회사소개</a>
+                            <ul class="depth2 dep1">
+                                <li><a href="" >인사말</a></li>
+                                <li><a href="" >조직도</a></li>
+                                <li><a href="" >오시는길</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">메뉴1</a>
+                            <ul class="depth2 dep2">
+                                <li><a href="" >메뉴1_1</a></li>
+                                <li><a href="" >메뉴1_2</a></li>
+                                <li><a href="" >메뉴1_3</a></li>
+                                <li><a href="" >메뉴1_4</a></li>
+                                <li><a href="" >메뉴1_5</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="" id="dep1">메뉴2</a>
+                            <ul class="depth2">
+                                <li><a href="" >메뉴2_1</a></li>
+                                <li><a href="" >메뉴2_2</a></li>
+                                <li><a href="" >메뉴2_3</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="" id="dep1">메뉴3</a>
+                            <ul class="depth2">
+                                <li><a href="" >메뉴3_1</a></li>
+                                <li><a href="" >메뉴3_2</a></li>
+                                <li><a href="" >메뉴3_3</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="" id="dep1">메뉴4</a>
+                            <ul class="depth2">
+                                <li><a href="" >메뉴4_1</a></li>
+                                <li><a href="" >메뉴4_2</a></li>
+                                <li><a href="" >메뉴4_3</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="" id="dep1">메뉴5</a>
+                            <ul class="depth2">
+                                <li><a href="" >메뉴5_1</a></li>
+                                <li><a href="" >메뉴5_2</a></li>
+                                <li><a href="" >메뉴5_3</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="" id="dep1">메뉴6</a>
+                            <ul class="depth2">
+                                <li><a href="" >메뉴6_1</a></li>
+                                <li><a href="" >메뉴6_1</a></li>
+                                <li><a href="" >메뉴6_1</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="" id="dep1">메뉴7</a>
+                            <ul class="depth2">
+                                <li><a href="" >메뉴7_1</a></li>
+                                <li><a href="" >메뉴7_1</a></li>
+                                <li><a href="" >메뉴7_1</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header_mo">
+        <div class="headtop_mo">
+            <div class="size_mo">
+                <a href="#;" class="menu_btn"><img src="img/m_header_pavi.png"></a>
+                <h1 class="logo"><a href="/"><img src="img/logo.png"/></a></h1>
+                <a href="" class="call_btn"><img src="img/m_header_call.png"></a>
+            </div>
+        </div>
+    </div>
+    <div class="mbg"></div>
+    <div class="allmenu_mo">
+        <div class="alltop">
+            <a class="log" href=""><img src="img/m_header_log.png"></a>
+            <div class="loginbtns01">
+                <a href="">로그인</a>
+            </div>
+            <a href="#;" class="all_close"><img src="img/m_header_close.png"></a>
+            <div class="loginbtns02">
+                <a href="">회원가입</a>
+                <a href="">주문내역</a>
+                <a href="">1:1문의</a>
+            </div>
+        </div>
+        <div class="mgnb">
+                <ul class="depth1 clear">
+                    <li>
+                        <a href="#;" >회사소개</a>
+                        <ul class="depth2">
+                            <li><a href="" >인사말</a></li>
+                            <li><a href="" >조직도</a></li>
+                            <li><a href="" >오시는길</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#;" >메뉴1</a>
+                        <ul class="depth2">
+                            <li><a href="" >메뉴1_1</a></li>
+                            <li><a href="" >메뉴1_2</a></li>
+                            <li><a href="" >메뉴1_3</a></li>
+                            <li><a href="" >메뉴1_4</a></li>
+                            <li><a href="" >메뉴1_5</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#;" >메뉴2</a>
+                        <ul class="depth2">
+                            <li><a href="" >메뉴2_1</a></li>
+                            <li><a href="" >메뉴2_2</a></li>
+                            <li><a href="" >메뉴2_3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#;" >메뉴3</a>
+                        <ul class="depth2">
+                            <li><a href="" >메뉴3_1</a></li>
+                            <li><a href="" >메뉴3_2</a></li>
+                            <li><a href="" >메뉴3_3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#;" >메뉴4</a>
+                        <ul class="depth2">
+                            <li><a href="" >메뉴4_1</a></li>
+                            <li><a href="" >메뉴4_2</a></li>
+                            <li><a href="" >메뉴4_3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#;" >메뉴5</a>
+                        <ul class="depth2">
+                            <li><a href="" >메뉴5_1</a></li>
+                            <li><a href="" >메뉴5_2</a></li>
+                            <li><a href="" >메뉴5_3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#;" >메뉴6</a>
+                        <ul class="depth2">
+                            <li><a href="" >메뉴6_1</a></li>
+                            <li><a href="" >메뉴6_1</a></li>
+                            <li><a href="" >메뉴6_1</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#;" >메뉴7</a>
+                        <ul class="depth2">
+                            <li><a href="" >메뉴7_1</a></li>
+                            <li><a href="" >메뉴7_1</a></li>
+                            <li><a href="" >메뉴7_1</a></li>
+                        </ul>
+                    </li>
+                </ul>
+        </div>
+    </div>
+            
+</body>
