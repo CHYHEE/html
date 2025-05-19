@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        window.onload = function() {
+            console.log('window.onload');
+        }
+        $(function() {
+            console.log('$ function');
+        })
+        $(document).ready(function() {
+            console.log('document ready');
+            // 요소객체 생성 $(문자열)
+            //$('<div>넷째</div>').appendTo("#parent");
+            // 안쪽 끝에 추가
+            $('#parent').append('<div>넷째</div>');
+            // 뒤에 추가
+            $('#parent').after('<div>이모</div>');
+            // before, insert, prepend -> XXXto
+
+            // 이동
+            // $('#first').appendTo('#third');
+
+            // 복제
+            //$('#first').clone().appendTo('#third');
+            $('#third').on('click', function() {
+                alert('클릭');
+            });
+            $("#first").click(function() {
+                alert('first');
+            })
+        });
+
+        $(function() {
+            $("#start").click(function() {
+                x = setInterval(function() {
+                    $("#cnt").html(Number($("#cnt").html()) +1);
+                },1000);
+            });
+            $("#end").click(function() {
+                clearInterval(x);
+            })
+        })
+    </script>
+</head>
+<body>
+    <div id="parent">
+        <div id="first">첫째</div>
+        <div id="second">둘째</div>
+        <div id="third">셋째</div>
+    </div>
+    <div id="cnt">0</div>
+    <input type="button" value="시작" id="start">
+    <input type="button" value="종료" id="end">
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(function() {
+            // 매개변수가 있으면 setter
+            $("#id").val('hong');
+
+            $("input[type='button']").on('click', function() {
+                let v = $("#id").val();     // 매개변수가 없으면 getter
+                if($("#id").val()==='') {
+                    alert('아이디를 입력해 주세요');
+                }
+            });
+
+            $("#btn1").click(function() {
+                // 사라지는 효과
+                //$("#div1").hide();
+                // 나타나는 효과
+                //$("#div1").show();
+                // 토글
+                //$("#div1").toggle(2000);
+
+                // 슬라이드 효과(slideDown, slideUp, slideToggle)
+                //$("#div1").slideToggle();
+
+                // 애니메이션 효과
+                $("#div1").animate({
+                    left:500,
+                }, 3000).animate({
+                    top:500
+                }, 1000);
+            });
+        });
+    </script>
+    <style>
+        #div1 {
+            width: 100px; height: 100px;
+            border: 1px solid black;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" id="btn1" value="효과">
+    <div id="div1"></div>
+    <hr>
+    <input type="text" id="id"><br>
+    <input type="button" value="로그인">
+</body>
+</html>
